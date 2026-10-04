@@ -1,28 +1,52 @@
-import Link from "next/link";
+export default function Home() {
+  return (
+    <main className="min-h-screen bg-[#faf9f6] text-[#0f1f1c]">
+      {/* HEADER - Full Root Source Theme */}
+      <header className="flex justify-between items-center px-8 py-6 max-w-7xl mx-auto">
+        <div className="flex items-center gap-3">
+          <div className="w-12 h-12 rounded-full bg-white border border-[#c9a86a]/30 shadow-lg flex items-center justify-center overflow-hidden p-1">
+            <img src="/logo.png" alt="Root Source" className="w-full h-full object-contain" />
+          </div>
+          <span className="font-black tracking-[0.2em] text-sm">ROOTSOURCE</span>
+        </div>
+        <nav className="hidden md:flex gap-8 text-sm tracking-widest opacity-60">
+          <span>SHOP</span><span>STORY</span><span>CONTACT</span>
+        </nav>
+      </header>
 
-export default function Home(){
-return (
-<main className="min-h-screen bg-black text-white">
-<nav className="flex justify-between items-center p-6 border-b border-orange-900/20">
-<img src="/logo.png" alt="logo" className="w-10 h-10 rounded-full"/>
-<div className="flex gap-6 text-xs tracking-widest">
-<Link href="/apothecary">APOTHECARY</Link>
-<Link href="/lab">LAB</Link>
-<Link href="/story">STORY</Link>
-</div>
-</nav>
+      {/* HERO - Premium */}
+      <section className="max-w-7xl mx-auto px-8 py-20 grid md:grid-cols-2 gap-16 items-center">
+        <div>
+          <div className="inline-flex items-center gap-2 bg-white border border-[#c9a86a]/20 rounded-full px-4 py-2 text-xs tracking-widest mb-6">
+            <span className="w-2 h-2 bg-[#1a3c34] rounded-full"></span>
+            PURE FROM SOURCE
+          </div>
+          <h1 className="text-6xl md:text-7xl font-black leading-[0.9] tracking-tight">
+            ROOT<br/>SOURCE
+            <span className="block text-2xl font-normal mt-4 tracking-[0.3em] opacity-60">Premium Herbal Company</span>
+          </h1>
+          <p className="mt-8 text-lg opacity-70 max-w-md leading-relaxed">
+            Root Elixirs is a wellness company dedicated to reconnecting people with nature's power.
+          </p>
+          <button className="mt-10 bg-[#0f1f1c] text-[#faf9f6] px-8 py-4 rounded-full text-sm tracking-widest hover:bg-black transition">
+            SHOP COLLECTION →
+          </button>
+        </div>
 
-<section className="text-center py-20 px-6">
-<img src="/logo.png" alt="logo" className="w-36 h-36 mx-auto rounded-full border border-orange-500/20 mb-6"/>
-<h1 className="text-5xl font-bold tracking-widest">ROOT SOURCE</h1>
-<p className="text-orange-400 tracking-[0.3em] text-sm mt-3">(Pty) Ltd</p>
-<p className="text-zinc-400 mt-6 max-w-xl mx-auto">Premium Herbal Alchemy - Indonesian roots, Park Rynie South Coast lab. Ethically sourced, lab-tested.</p>
-<div className="mt-8 flex justify-center gap-4">
-<Link href="/apothecary" className="bg-orange-600 text-black px-8 py-3 font-bold">SHOP ROOTS</Link>
-<Link href="/knowledge" className="border border-white/20 px-8 py-3">KNOWLEDGE</Link>
-</div>
-</section>
-
-<footer className="text-center text-xs text-zinc-600 py-12">© 2026 ROOT SOURCE (Pty) Ltd - Park Rynie, South Coast, KZN</footer>
-</main>
-)}
+        {/* PREMIUM LOGO BUBBLE - Big, Clear, Full Logo */}
+        <div className="flex justify-center">
+          <div className="relative">
+            <div className="absolute -inset-10 bg-gradient-to-br from-[#c9a86a]/10 to-[#1a3c34]/10 rounded-full blur-2xl"></div>
+            <div className="relative w-[380px] h-[380px] rounded-full bg-white border border-[#c9a86a]/30 shadow-[0_20px_60px_rgba(0,0,0,0.1)] flex items-center justify-center p-12">
+              <img
+                src="/logo.png"
+                alt="Root Source Logo"
+                className="w-full h-full object-contain"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  )
+}
